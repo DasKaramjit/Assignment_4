@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Checking = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,18 +50,20 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.radioimp = new System.Windows.Forms.RadioButton();
+            this.radiomet = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // Checking
             // 
-            this.button1.Location = new System.Drawing.Point(21, 253);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 45);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Check";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Checking.Location = new System.Drawing.Point(21, 253);
+            this.Checking.Name = "Checking";
+            this.Checking.Size = new System.Drawing.Size(137, 45);
+            this.Checking.TabIndex = 0;
+            this.Checking.Text = "Check";
+            this.Checking.UseVisualStyleBackColor = true;
+            this.Checking.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -76,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(323, 22);
+            this.label1.Location = new System.Drawing.Point(41, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 39);
             this.label1.TabIndex = 3;
@@ -89,7 +91,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(394, 39);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Enter Weight(Pound, Kg)";
+            this.label2.Text = "Enter Weight(Pound/ Kg)";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
@@ -116,9 +118,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(14, 145);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(347, 39);
+            this.label3.Size = new System.Drawing.Size(356, 39);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Enter Height (Inc., m.)";
+            this.label3.Text = "Enter Height (Inc. / m.)";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
@@ -141,6 +143,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -154,6 +157,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label11, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label12, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label13, 1, 4);
+            this.tableLayoutPanel1.ForeColor = System.Drawing.SystemColors.MenuText;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(284, 253);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -179,7 +183,7 @@
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.Location = new System.Drawing.Point(52, 9);
+            this.label5.Location = new System.Drawing.Point(52, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 36);
             this.label5.TabIndex = 0;
@@ -189,7 +193,7 @@
             // Underweight
             // 
             this.Underweight.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Underweight.Location = new System.Drawing.Point(5, 60);
+            this.Underweight.Location = new System.Drawing.Point(5, 58);
             this.Underweight.Name = "Underweight";
             this.Underweight.Size = new System.Drawing.Size(182, 44);
             this.Underweight.TabIndex = 2;
@@ -200,7 +204,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 118);
+            this.label8.Location = new System.Drawing.Point(32, 115);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(127, 39);
             this.label8.TabIndex = 4;
@@ -209,9 +213,9 @@
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.Location = new System.Drawing.Point(3, 170);
+            this.label9.Location = new System.Drawing.Point(4, 168);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(186, 35);
+            this.label9.Size = new System.Drawing.Size(184, 35);
             this.label9.TabIndex = 5;
             this.label9.Text = "Overweight";
             // 
@@ -219,7 +223,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(37, 214);
+            this.label10.Location = new System.Drawing.Point(37, 213);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(117, 39);
             this.label10.TabIndex = 6;
@@ -228,7 +232,7 @@
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.Location = new System.Drawing.Point(206, 64);
+            this.label7.Location = new System.Drawing.Point(205, 61);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(164, 37);
             this.label7.TabIndex = 3;
@@ -238,7 +242,7 @@
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.Location = new System.Drawing.Point(210, 171);
+            this.label11.Location = new System.Drawing.Point(209, 169);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(156, 34);
             this.label11.TabIndex = 7;
@@ -248,7 +252,7 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(208, 118);
+            this.label12.Location = new System.Drawing.Point(207, 115);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(160, 39);
             this.label12.TabIndex = 8;
@@ -257,7 +261,7 @@
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.Location = new System.Drawing.Point(211, 215);
+            this.label13.Location = new System.Drawing.Point(210, 214);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(154, 36);
             this.label13.TabIndex = 9;
@@ -268,11 +272,37 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // radioimp
+            // 
+            this.radioimp.AutoSize = true;
+            this.radioimp.Location = new System.Drawing.Point(212, 29);
+            this.radioimp.Name = "radioimp";
+            this.radioimp.Size = new System.Drawing.Size(160, 43);
+            this.radioimp.TabIndex = 11;
+            this.radioimp.TabStop = true;
+            this.radioimp.Text = "Imperial";
+            this.radioimp.UseVisualStyleBackColor = true;
+            this.radioimp.CheckedChanged += new System.EventHandler(this.radioimp_CheckedChanged);
+            // 
+            // radiomet
+            // 
+            this.radiomet.AutoSize = true;
+            this.radiomet.Location = new System.Drawing.Point(454, 31);
+            this.radiomet.Name = "radiomet";
+            this.radiomet.Size = new System.Drawing.Size(130, 43);
+            this.radiomet.TabIndex = 12;
+            this.radiomet.TabStop = true;
+            this.radiomet.Text = "Metric";
+            this.radiomet.UseVisualStyleBackColor = true;
+            this.radiomet.CheckedChanged += new System.EventHandler(this.radiomet_CheckedChanged);
+            // 
             // BMICalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 520);
+            this.Controls.Add(this.radiomet);
+            this.Controls.Add(this.radioimp);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
@@ -282,7 +312,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Checking);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(7);
@@ -300,7 +330,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Checking;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -321,6 +351,8 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RadioButton radioimp;
+        private System.Windows.Forms.RadioButton radiomet;
     }
 }
 

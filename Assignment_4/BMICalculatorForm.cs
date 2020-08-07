@@ -15,10 +15,9 @@ namespace Assignment_4
         double hinch;
         double wpound;
         double timperial;
-
-        private object txtHeight;
-        private object txtWeight;
-        private object lblBMI;
+        double tmetric;
+         double wkg;
+         double hmetres;
 
         public BMICalculatorForm()
         {
@@ -61,10 +60,26 @@ namespace Assignment_4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            hinch = double.Parse(label3.Text);
-            wpound = double.Parse(label2.Text);
-            timperial = (wpound * 703) / (hinch * hinch);
-            label4.Text = String.Format("{0:f}", timperial);
+            hinch = double.Parse(textBox1.Text);
+            wpound = double.Parse(textBox2.Text);
+            hmetres = double.Parse(textBox1.Text);
+            wkg = double.Parse(textBox2.Text);
+            if (radioimp.Checked)
+            {
+                timperial = (wpound * 703) / (hinch * hinch);
+                textBox3.Text = String.Format("{0:f}", timperial);
+            }
+            else if(radiomet.Checked)
+            {
+                tmetric = (wkg) / (hmetres * hmetres);
+                textBox3.Text = String.Format("{0:f}", tmetric);
+            }
+
+
+            if (timperial<24.9)
+            {
+                textBox3.BackColor = Color.Aqua;
+            }
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -83,6 +98,28 @@ namespace Assignment_4
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioimp_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+
+            if (rb == null)
+            {
+                MessageBox.Show("Sender is not a RadioButton");
+                return;
+            }
+
+        
+        
+             
+                
+            
+        }
+
+        private void radiomet_CheckedChanged(object sender, EventArgs e)
         {
 
         }
