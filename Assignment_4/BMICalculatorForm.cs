@@ -10,14 +10,21 @@ using System.Windows.Forms;
 
 namespace Assignment_4
 {
+    /* Das Karamjit
+     301108505
+     This the program of windows form to display BMI Calculator.
+     Last Modified : 7-8-2020 */
+
+
+
     public partial class BMICalculatorForm : Form
     {
         double hinch;
         double wpound;
         double timperial;
         double tmetric;
-         double wkg;
-         double hmetres;
+        double wkg;
+        double hmetres;
 
         public BMICalculatorForm()
         {
@@ -55,28 +62,28 @@ namespace Assignment_4
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Text = "";
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            hinch = double.Parse(textBox1.Text);
-            wpound = double.Parse(textBox2.Text);
-            hmetres = double.Parse(textBox1.Text);
-            wkg = double.Parse(textBox2.Text);
-            if (radioimp.Checked)
+            hinch = double.Parse(textBox2.Text);
+            wpound = double.Parse(textBox1.Text);
+            hmetres = double.Parse(textBox2.Text);
+            wkg = double.Parse(textBox1.Text);
+            if (radioimp.Checked == true)
             {
                 timperial = (wpound * 703) / (hinch * hinch);
                 textBox3.Text = String.Format("{0:f}", timperial);
             }
-            else if(radiomet.Checked)
+            else if (radiomet.Checked)
             {
                 tmetric = (wkg) / (hmetres * hmetres);
                 textBox3.Text = String.Format("{0:f}", tmetric);
             }
 
 
-            if (timperial<24.9)
+            if (timperial < 24.9)
             {
                 textBox3.BackColor = Color.Aqua;
             }
@@ -112,16 +119,28 @@ namespace Assignment_4
                 return;
             }
 
-        
-        
-             
-                
-            
+
+
+
+
+
         }
 
         private void radiomet_CheckedChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void BMICalculatorForm_Shown(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        
+
+        
     }
 }
